@@ -2,9 +2,11 @@ const { hash } = window.location
 
 const message = atob(hash.replace('#', ''))
 
-if (messsage) {
+if (message) {
   document.querySelector('#message-form').classList.add('hide')
-  codument.querySelector('#message-show').classList.remove('hide')
+  document.querySelector('#message-show').classList.remove('hide')
+
+  document.querySelector('h1').innerHTML = message
 }
 
 document.querySelector('form').addEventListener('submit', e => {
